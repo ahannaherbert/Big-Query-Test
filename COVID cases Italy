@@ -1,0 +1,79 @@
+-- minimum new_current_confirmed_cases
+SELECT
+  min(new_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+LIMIT
+  10
+  
+  --count total current confirmed cases
+SELECT
+  count(total_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+limit 10
+
+--maximum total current confirmed cases
+SELECT
+  MAX(total_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+LIMIT
+  10
+  
+  -- average total current confirmed cases
+SELECT
+  avg(total_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+LIMIT
+  10
+  
+  -- sum total current confirmed cases
+SELECT
+  sum(total_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+LIMIT
+  10
+  
+  -- group by total_current_confirmed_cases
+SELECT
+total_current_confirmed_cases , count(*)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+group by (total_current_confirmed_cases)
+limit 10
+
+-- distinct total_current_confirmed_cases
+SELECT
+distinct total_current_confirmed_cases
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+limit 10
+
+SELECT
+  COUNT(new_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+WHERE
+  hospitalized_patients_symptoms between 221 and 6387
+LIMIT
+  10
+  
+  -- minimum new_current_confirmed_cases
+SELECT
+  min(new_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+LIMIT
+  10
+  
+  SELECT
+  COUNT(new_current_confirmed_cases)
+FROM
+  `bigquery-public-data.covid19_italy.national_trends`
+WHERE
+  hospitalized_patients_symptoms=101
+LIMIT
+  10
